@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08080a;
+  --foreground: #f3f4f6;
+  --primary-gold: #e5c07b;
+  --burgundy: #9b111e;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #262633;
+  border-radius: 5px;
+  border: 2px solid #0d0d12;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c41e3a;
+}
+
+/* Ambient glow utilities */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(229, 192, 123, 0.12);
+}
+
+.burgundy-glow {
+  box-shadow: 0 0 25px rgba(155, 17, 30, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff7d6 0%, #e5c07b 50%, #b89230 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom right, rgba(229, 192, 123, 0.4), rgba(155, 17, 30, 0.3), rgba(255, 255, 255, 0.05)) 1;
+}
+
+/* Marquee pause on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
